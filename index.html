@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mononty ❤️ 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:"El Messiri",sans-serif;
+background:linear-gradient(160deg,#3a0008,#9b001f);
+color:#5a0a14;
+}
+.snow{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff3 2px,transparent 3px);background-size:120px 120px;animation:move 15s linear infinite;}
+@keyframes move{to{background-position:0 120px}}
+.wrap{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:15px}
+.phone{width:min(420px,95vw)}
+.card{background:#fff7f6;border-radius:28px;padding:22px;box-shadow:0 20px 50px #0005;margin-bottom:15px;display:none}
+.card.active{display:block}
+.center{text-align:center}
+.btn{border:none;border-radius:999px;padding:14px 20px;font-size:18px;cursor:pointer;font-family:inherit}
+.primary{background:#b4001b;color:#fff}
+.ghost{background:#fff;color:#b4001b;border:1px solid #b4001b}
+input{width:90%;padding:14px;border-radius:999px;border:2px solid #b4001b;font-size:18px}
+h1{font-family:"Great Vibes";font-size:48px;color:#b4001b}
+.poem{line-height:2;font-size:19px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+img,video{width:100%;border-radius:18px}
+.music{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+footer{color:#fff;text-align:center;font-family:"Great Vibes";font-size:28px}
+.hearts{font-size:22px}
+</style>
+</head>
+
+<body>
+<div class="snow"></div>
+
+<div class="wrap">
+<div class="phone">
+
+<!-- الصفحة الأولى -->
+<div class="card active" id="p1">
+<div class="center">
+<h1>منونتي 💖</h1>
+<div class="poem">
+ازيك يامنونتي عامله ايه انهارده  
+عدي سنه كامله فيها كل انواع الحب والخناق والفراق  
+الزعل والحزن والفرح والسعاده  
+سنه فيها كل حاجه بس جت ف الاخر وبوخت مننا احنا الاتنين  
+بس احنا فضلنا مسكين بعض ومتمسكين ببعض ❤️  
+كل الناس ضدنا حتي اهلنا  
+بس انا متاكد اننا اللي هنكسب بحبنا الكبير  
+ومتأكد انك هتبقي مراتي ف يوم  
+الحلم اللي حلمناه انا وانتي هيتحقق  
+حقك عليا يا نن عنيا  
+بحبك ❤️💖💞
+</div>
+
+<br>
+<button class="btn primary" onclick="go('p2')">✨ Start Journey ✨</button>
+</div>
+</div>
+
+<!-- الصفحة التانية -->
+<div class="card" id="p2">
+<div class="center">
+<h1>حبيبتي 💕</h1>
+<div class="poem">
+اتمني السنه الجايه نفضل مع بعض  
+ونرجع اقوي من الاول  
+واتمني ف السنه دي اني اتقدم ليكي  
+واهلي واهلك يوافقوا  
+وتنجحي يارب وتبقي اشطر دكتوره  
+زي مانتي اشطر كتكوته ف الدنيا 💖🎓
+</div>
+
+<br>
+<button class="btn primary" onclick="go('p3')">🔒 Password</button>
+<button class="btn ghost" onclick="go('p1')">🔄 Restart Journey</button>
+</div>
+</div>
+
+<!-- صفحة الباسورد -->
+<div class="card" id="p3">
+<div class="center">
+<h2>2026 🎄</h2>
+<p>enter password</p>
+<input type="password" id="pass">
+<p id="err" style="color:red"></p>
+<button class="btn primary" onclick="unlock()">🔓 Unlock</button>
+</div>
+</div>
+
+<!-- صفحة الميموريز -->
+<div class="card" id="p4">
+<h1 class="center">Our Beautiful Memories 💞</h1>
+
+<div class="grid">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+<img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+<img src="https://images.unsplash.com/photo-1603570417089-3c6a71d86c6c">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+<img src="https://images.unsplash.com/photo-1582719478185-2d3c4f0f64c2">
+</div>
+
+<br>
+<video controls src="https://cdn.pixabay.com/video/2021/02/26/66441-516620890_large.mp4"></video>
+
+<div class="music">
+<span>🎵 خليك معايا – عمرو دياب</span>
+<button class="btn ghost" onclick="playSong(0)">▶️</button>
+</div>
+
+<div class="music">
+<span>🎵 انا من غيرك بتوه</span>
+<button class="btn ghost" onclick="playSong(1)">▶️</button>
+</div>
+
+<audio id="a1" src=""></audio>
+<audio id="a2" src=""></audio>
+
+<br>
+<div class="center hearts">💖💞❤️💗💓</div>
+<br>
+<button class="btn primary" onclick="go('p1')">🔄 Restart Journey</button>
+</div>
+
+<footer>Lovely Christmas 2026 🎄❤️</footer>
+
+</div>
+</div>
+
+<script>
+function go(id){
+document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+function unlock(){
+if(document.getElementById('pass').value==="20/10"){
+go('p4');
+}else{
+document.getElementById('err').innerText="الباسورد غلط 💔";
+}
+}
+
+function playSong(n){
+alert("لو حابب أشغل الأغاني فعليًا، حط ملفات mp3 جنب الملف وغير src 🎵");
+}
+</script>
+
+</body>
+</html>
