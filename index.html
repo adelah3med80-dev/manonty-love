@@ -6,71 +6,60 @@
 <title>منونتي ❤️ 2026</title>
 
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
 <style>
 body{
-margin:0;
-font-family:"El Messiri",sans-serif;
-background:linear-gradient(160deg,#3a0008,#9b001f);
-color:#5a0a14;
+  margin:0;
+  font-family:"El Messiri", sans-serif;
+  background:linear-gradient(160deg,#3a0008,#9b001f);
+  color:#5a0a14;
 }
-.snow{
-position:fixed;inset:0;pointer-events:none;
-background-image:radial-gradient(#fff3 2px,transparent 3px);
-background-size:120px 120px;
-animation:move 15s linear infinite;
+  
+/* خلفية الكلمات المتحركة */
+.bg-words {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
-@keyframes move{to{background-position:0 120px}}
 
-.wrap{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:15px}
-.phone{width:min(420px,95vw)}
-.card{
-background:#fff7f6;
-border-radius:28px;
-padding:22px;
-box-shadow:0 20px 50px #0005;
-margin-bottom:15px;
-display:none
+.bg-words span {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.08);
+  font-size: 28px;
+  font-family: "El Messiri", sans-serif;
+  white-space: nowrap;
+  animation: floatWords linear infinite;
 }
-.card.active{display:block}
-.center{text-align:center}
-.btn{
-border:none;border-radius:999px;
-padding:14px 20px;
-font-size:18px;
-cursor:pointer;
-font-family:inherit
+
+/* حركة الكلمات */
+@keyframes floatWords {
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
 }
-.primary{background:#b4001b;color:#fff}
-.ghost{background:#fff;color:#b4001b;border:1px solid #b4001b}
-input{
-width:90%;
-padding:14px;
-border-radius:999px;
-border:2px solid #b4001b;
-font-size:18px
+
+/* نخلي المحتوى فوق الخلفية */
+.wrap, .phone {
+  position: relative;
+  z-index: 2;
 }
-h1{
-font-family:"Great Vibes";
-font-size:48px;
-color:#b4001b
-}
-.poem{line-height:2;font-size:19px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-img,video{width:100%;border-radius:18px}
-.music{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
-footer{
-color:#fff;
-text-align:center;
-font-family:"Great Vibes";
-font-size:28px;
-margin-top:10px
-}
-.hearts{font-size:22px}
 </style>
+  
 </head>
 
 <body>
+  <div class="bg-words">
+  <span style="left:10%; animation-duration:18s;">بحبك يامنونتي 💖</span>
+  <span style="left:30%; animation-duration:22s;">بحبك يا كتكوتي 🐥</span>
+  <span style="left:50%; animation-duration:20s;">بحبببببببك ❤️</span>
+  <span style="left:70%; animation-duration:26s;">يا روح قلبي 💞</span>
+  <span style="left:85%; animation-duration:30s;">اسف اني زعلتك حقك عليا 💔</span>
+</div>
+
 <div class="snow"></div>
 
 <div class="wrap">
@@ -223,4 +212,5 @@ document.getElementById("song2").play();
 
 </body>
 </html>
+
 
