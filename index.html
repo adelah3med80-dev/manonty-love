@@ -3,164 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2026 ❤️ منونتي</title>
+<title>منونتي ❤️ 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
 body{
-  margin:0;
-  font-family:"El Messiri",sans-serif;
-  background:linear-gradient(160deg,#3a0008,#9b001f);
-  color:#fff;
-  min-height:100vh;
-  overflow-x:hidden;
+margin:0;
+font-family:"El Messiri",sans-serif;
+background:linear-gradient(160deg,#3a0008,#9b001f);
+color:#5a0a14;
 }
+.snow{
+position:fixed;inset:0;pointer-events:none;
+background-image:radial-gradient(#fff3 2px,transparent 3px);
+background-size:120px 120px;
+animation:move 15s linear infinite;
+}
+@keyframes move{to{background-position:0 120px}}
 
-/* كلمات الحب في الخلفية */
-.bg-words{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  overflow:hidden;
-  z-index:0;
-}
-.bg-words span{
-  position:absolute;
-  color:rgba(255,255,255,.04);
-  font-size:28px;
-  white-space:nowrap;
-  animation:floatWords linear infinite;
-}
-@keyframes floatWords{
-  from{transform:translateY(110vh)}
-  to{transform:translateY(-120vh)}
-}
-
-/* الحاوية */
-.wrap{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  position:relative;
-  z-index:5;
-}
-
-/* الكارت */
+.wrap{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:15px}
+.phone{width:min(420px,95vw)}
 .card{
-  width:100%;
-  max-width:440px;
-  background:rgba(255,255,255,.1);
-  backdrop-filter:blur(8px);
-  border-radius:22px;
-  padding:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
+background:#fff7f6;
+border-radius:28px;
+padding:22px;
+box-shadow:0 20px 50px #0005;
+margin-bottom:15px;
+display:none
 }
-
-/* الهيدر */
-.header{text-align:center;margin-bottom:10px}
-.header h1{margin:0;font-size:22px}
-
-/* الباسورد */
-.lock{display:flex;gap:8px;margin:12px 0}
-.lock input{
-  flex:1;
-  padding:10px;
-  border-radius:10px;
-  border:none;
-  outline:none;
-  font-family:inherit;
+.card.active{display:block}
+.center{text-align:center}
+.btn{
+border:none;border-radius:999px;
+padding:14px 20px;
+font-size:18px;
+cursor:pointer;
+font-family:inherit
 }
-.lock button{
-  padding:10px 14px;
-  border-radius:10px;
-  border:none;
-  cursor:pointer;
+.primary{background:#b4001b;color:#fff}
+.ghost{background:#fff;color:#b4001b;border:1px solid #b4001b}
+input{
+width:90%;
+padding:14px;
+border-radius:999px;
+border:2px solid #b4001b;
+font-size:18px
 }
-
-/* المحتوى */
-.content{display:none}
-.content.active{display:block}
-
-/* الرسائل */
-.message{
-  line-height:2;
-  font-size:15px;
-  margin-bottom:16px;
-  opacity:.95;
+h1{
+font-family:"Great Vibes";
+font-size:48px;
+color:#b4001b
 }
-
-/* الصور */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:8px;
-  margin-bottom:12px;
+.poem{line-height:2;font-size:19px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+img,video{width:100%;border-radius:18px}
+.music{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+footer{
+color:#fff;
+text-align:center;
+font-family:"Great Vibes";
+font-size:28px;
+margin-top:10px
 }
-.gallery img{
-  width:100%;
-  height:140px;
-  object-fit:cover;
-  border-radius:14px;
-}
-
-/* فيديو */
-video{
-  width:100%;
-  border-radius:16px;
-  margin-bottom:12px;
-}
-
-/* صوت */
-audio{width:100%;margin:6px 0}
-
-/* زر */
-.restart{
-  width:100%;
-  margin-top:10px;
-  padding:10px;
-  border-radius:12px;
-  border:none;
-  cursor:pointer;
-}
+.hearts{font-size:22px}
 </style>
 </head>
 
 <body>
-
-<!-- كلمات الحب -->
-<div class="bg-words">
-  <span style="left:10%;animation-duration:18s;">بحبك يامنونتي 💖</span>
-  <span style="left:30%;animation-duration:22s;">بحبك يا كتكوتي 🐥</span>
-  <span style="left:50%;animation-duration:20s;">بحبببببببك ❤️</span>
-  <span style="left:70%;animation-duration:26s;">يا روح قلبي 💞</span>
-  <span style="left:85%;animation-duration:30s;">اسف اني زعلتك حقك عليا 💔</span>
-</div>
+<div class="snow"></div>
 
 <div class="wrap">
-  <div class="card">
+<div class="phone">
 
-    <div class="header">
-      <h1>2026 ❤️</h1>
-      <small>اكتبي الباسورد</small>
-    </div>
+<!-- 🔐 صفحة الباسورد (أول صفحة) -->
+<div class="card active" id="p3">
+<div class="center">
+<h1>2026 🎄</h1>
+<p>اكتب الباسورد يا منونتي ❤️</p>
+<input type="password" id="pass" placeholder="Password">
+<p id="err" style="color:red"></p>
+<button class="btn primary" onclick="unlock()">🔓 Unlock</button>
+</div>
+</div>
 
-    <div class="lock">
-      <input id="pass" type="password" placeholder="Password">
-      <button onclick="unlock()">🔓 Unlock</button>
-    </div>
-
-    <div id="content" class="content">
-
-      <!-- الرسالة الأولى -->
-      <div class="message">
+<!-- 💌 الصفحة الأولى (الرسالة) -->
+<div class="card" id="p1">
+<div class="center">
+<h1>منونتي 💖</h1>
+<div class="poem">
 زيك يامنونتي عامله ايه انهارده  
 عدي سنه كامله فيها كل انواع الحب والخناق والفراق  
 الزعل والحزن والفرح والسعاده  
-
 سنه فيها كل حاجه بس جت ف الاخر وبوخت مننا احنا الاتنين  
 بس احنا فضلنا مسكين بعض ومتمسكين ببعض ❤️  
 
@@ -193,54 +127,96 @@ audio{width:100%;margin:6px 0}
 ام عيالي ومراتي  
 
 واخيرا نسيت اقولك حاجه مهمه  
-بحبك ❤️
+بحبك ❤️💖💞
 </div>
- 
-      <!-- الرسالة التانية -->
-      <div class="message">
-اتمنى السنة الجاية نفضل مع بعض  
-ونرجع أقوى من الأول  
-واتمنى السنة دي أتقدم لك رسمي  
-وأكون عملت كل اللي يفرحك  
 
-ربنا يسعدك يا منونتي  
-وتنجحي وتبقي أشطر دكتورة  
-زي ما انتي أشطر كتكوتة في الدنيا 🐥❤️
-      </div>
+<br>
+<button class="btn primary" onclick="go('p2')">✨ Start Journey ✨</button>
+</div>
+</div>
 
-      <!-- الصور -->
-      <div class="gallery">
-        <img src="img1.jpg">
-        <img src="img2.jpg">
-        <img src="img3.jpg">
-        <img src="img4.jpg">
-        <img src="img5.jpg">
-      </div>
+<!-- 💕 الصفحة التانية -->
+<div class="card" id="p2">
+<div class="center">
+<h1>حبيبتي 💕</h1>
+<div class="poem">
+اتمني السنه الجايه نفضل مع بعض  
+ونرجع اقوي من الاول  
+واتمني ف السنه دي اني اتقدم ليكي  
+واهلي واهلك يوافقوا  
+وتنجحي يارب وتبقي اشطر دكتوره  
+زي مانتي اشطر كتكوته ف الدنيا 💖🎓
+</div>
 
-      <!-- الفيديو -->
-      <video src="video.mp4" controls></video>
+<br>
+<button class="btn primary" onclick="go('p4')">📸 Memories</button>
+<button class="btn ghost" onclick="go('p1')">🔄 Restart Journey</button>
+</div>
+</div>
 
-      <!-- الأغاني -->
-      <audio src="khalik-maaya.mp3" controls></audio>
-      <audio src="ana-men-gherak.mp3" controls></audio>
+<!-- 📸 صفحة الميموريز -->
+<div class="card" id="p4">
+<h1 class="center">Our Beautiful Memories 💞</h1>
 
-      <button class="restart" onclick="restart()">✨ Restart Journey ✨</button>
-    </div>
+<div class="grid">
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+<img src="img5.jpg">
+</div>
 
-  </div>
+<br>
+<video controls src="video.mp4"></video>
+
+<div class="music">
+<span>🎵 خليك معايا – عمرو دياب</span>
+<button class="btn ghost" onclick="playSong(1)">▶️</button>
+</div>
+
+<div class="music">
+<span>🎵 أنا من غيرك بتوه</span>
+<button class="btn ghost" onclick="playSong(2)">▶️</button>
+</div>
+
+<audio id="song1" src="khalik-maaya.mp3"></audio>
+<audio id="song2" src="ana-men-gherak.mp3"></audio>
+
+<br>
+<div class="center hearts">💖💞❤️💗💓</div>
+<br>
+<button class="btn primary" onclick="go('p1')">🔄 Restart Journey</button>
+</div>
+
+<footer>Lovely Christmas 2026 🎄❤️</footer>
+
+</div>
 </div>
 
 <script>
-function unlock(){
-  if(document.getElementById("pass").value==="20/10"){
-    document.getElementById("content").classList.add("active");
-  }else{
-    alert("الباسورد غلط");
-  }
+function go(id){
+document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
+document.getElementById(id).classList.add('active');
 }
-function restart(){
-  document.getElementById("pass").value="";
-  document.getElementById("content").classList.remove("active");
+
+function unlock(){
+if(document.getElementById('pass').value==="20/10"){
+go('p1');
+}else{
+document.getElementById('err').innerText="الباسورد غلط 💔";
+}
+}
+
+function playSong(n){
+document.getElementById("song1").pause();
+document.getElementById("song2").pause();
+
+if(n===1){
+document.getElementById("song1").play();
+}
+if(n===2){
+document.getElementById("song2").play();
+}
 }
 </script>
 
